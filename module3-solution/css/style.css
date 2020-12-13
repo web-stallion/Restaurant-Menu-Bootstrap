@@ -1,0 +1,109 @@
+/***** CSS VARIABLES *****/
+
+:root {
+	/* FONT-FAMILY */
+	--specialFont-family: "Roboto Slab", serif;
+	--textFont-family: "Assistant", sans-serif;
+
+	/* TEXT - COLOR */
+	--text-color: rgba(229, 227, 187, 1);
+	--mainHeading-color: rgba(60, 62, 74, 1);
+
+	/* BACKGROUND - COLOR */
+	--body-bcolor: rgba(255, 198, 92, 1);
+	--special-bcolor: rgba(209, 76, 76, 1);
+	--navLinks-bcolor: rgba(222, 129, 129, 0.5);
+	--tile-bcolor: rgba(60, 62, 74, 1);
+}
+
+/***** RESET DEFAULT CSS SETTINGS *****/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--textFont-family);
+	background-color: var(--body-bcolor);
+	color: var(--text-color);
+}
+
+/***** RESET BOOTSTRAP TOGGLER ICON COLOR  *****/
+
+.navbar-dark .navbar-toggler {
+	color: rgba(229, 227, 187, 0.55);
+	border-color: rgba(229, 227, 187, 0.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28229, 227, 187, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/***** CSS STYLES :: UTILITIES *****/
+
+.display-area {
+	max-width: 80%;
+}
+
+/***** HEADER - SECTION STYLES :: STARTS HERE *****/
+
+#header-nav {
+	font-family: var(--specialFont-family);
+	background-color: var(--special-bcolor);
+	color: var(--text-color);
+}
+
+#header-nav .navbar-brand {
+	color: var(--navbar-brand-color) !important;
+	font-weight: 900 !important;
+	letter-spacing: 2px;
+}
+
+#header-nav .a-link {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+/***** CSS STYLES :: DROPDOWN NAV LINKS *****/
+
+#navbarNav .nav-link {
+	letter-spacing: 1px;
+	background-color: var(--navLinks-bcolor);
+}
+
+#navbarNav .nav-link:hover {
+	background-color: var(--tile-bcolor);
+}
+
+/***** HEADER - SECTION STYLES :: ENDS HERE *****/
+
+/***** MAIN - SECTION STYLES :: STARTS HERE *****/
+
+#main-heading {
+	color: var(--mainHeading-color);
+}
+
+#chicken,
+#beef,
+#shushi {
+	background-color: var(--tile-bcolor);
+	max-height: 1000px;
+}
+
+#chicken h2,
+#beef h2,
+#shushi h2 {
+	background-color: var(--special-bcolor);
+}
+
+#chicken p,
+#beef p,
+#shushi p {
+	text-align: justify;
+	padding: 1em 3em;
+	line-height: 1.8;
+}
+
+/***** MAIN - SECTION STYLES :: ENDS HERE *****/
