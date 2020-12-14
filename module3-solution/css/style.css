@@ -30,7 +30,7 @@ body {
 	color: var(--text-color);
 }
 
-/***** RESET BOOTSTRAP TOGGLER ICON COLOR  *****/
+/***** RESET BOOTSTRAP VALUES  *****/
 
 .navbar-dark .navbar-toggler {
 	color: rgba(229, 227, 187, 0.55);
@@ -41,10 +41,35 @@ body {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28229, 227, 187, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/***** CSS STYLES :: UTILITIES *****/
+.btn {
+	line-height: 1.2;
+	color: var(--text-color);
+	background-color: var(--special-bcolor);
+	padding: 0.2rem 0.75rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
-.display-area {
-	max-width: 80%;
+.btn:hover {
+	color: #b4b4b4;
+	background-color: var(--navLinks-bcolor);
+	border-color: var(--navLinks-bcolor);
+}
+.btn:focus {
+	color: #b4b4b4;
+	background-color: var(--navLinks-bcolor);
+	border-color: var(--navLinks-bcolor);
+	box-shadow: 0 0 0 0.25rem var(--tile-bcolor);
+}
+.btn:active {
+	color: #b4b4b4;
+	background-color: var(--navLinks-bcolor);
+	border-color: var(--navLinks-bcolor);
+}
+.btn:checked {
+	box-shadow: 0 0 0 0.25rem var(--tile-bcolor);
 }
 
 /***** HEADER - SECTION STYLES :: STARTS HERE *****/
@@ -58,6 +83,7 @@ body {
 #header-nav .navbar-brand {
 	color: var(--navbar-brand-color) !important;
 	font-weight: 900 !important;
+	/* margin-left: 10%; */
 	letter-spacing: 2px;
 }
 
@@ -89,7 +115,6 @@ body {
 #beef,
 #shushi {
 	background-color: var(--tile-bcolor);
-	max-height: 1000px;
 }
 
 #chicken h2,
@@ -98,12 +123,66 @@ body {
 	background-color: var(--special-bcolor);
 }
 
-#chicken p,
-#beef p,
-#shushi p {
+#chicken .text,
+#beef .text,
+#shushi .text {
 	text-align: justify;
-	padding: 1em 3em;
+	padding: 1em 2em 0.5em;
 	line-height: 1.8;
 }
 
+#chicken .back-to-top,
+#beef .back-to-top,
+#shushi .back-to-top {
+	text-align: justify;
+	padding: 0 2em 0.5em;
+}
+
 /***** MAIN - SECTION STYLES :: ENDS HERE *****/
+
+/***** MEDIA QUERIES :: RESPONSIVE TO DEVICE DISPLAY :: STARTS HERE *****/
+
+@media screen and (min-width: 992px) {
+	#header-nav .navbar-brand {
+		margin-left: 2%;
+	}
+
+	#chicken,
+	#beef,
+	#shushi {
+		max-width: 30%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	#header-nav .navbar-brand {
+		margin-left: 2.5%;
+	}
+
+	#chicken,
+	#beef {
+		max-width: 45%;
+	}
+
+	#shushi {
+		max-width: 95%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#header-nav .navbar-brand {
+		margin-left: 10%;
+	}
+
+	#header-nav button.navbar-toggler {
+		margin-right: 10%;
+	}
+
+	#chicken,
+	#beef,
+	#shushi {
+		max-width: 80%;
+	}
+}
+
+/***** MEDIA QUERIES :: RESPONSIVE TO DEVICE DISPLAY :: ENDS HERE *****/
